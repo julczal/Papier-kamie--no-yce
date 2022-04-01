@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg, #1f3656 0%, #161f40 100%);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-container {
+  width: 90%;
+  padding: 10px;
+  border: 2px solid white;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  color: white;
+}
+
+.result-container .title {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-container .title p1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.result-container .score-container {
+  padding: 20px;
+  background: white;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  color: #516ff5;
+  border-radius: 20px;
+}
+
+.result-container .score-container p1 {
+  font-size: 20px;
+}
+
+.result-container .score-container .score {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.game-container {
+  margin-top: 50px;
+  width: 90%;
+  height: 50%;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "a b" "c c";
+}
+
+.game-container #first-choice {
+  grid-area: a;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.game-container #first-choice::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  border-radius: 50%;
+  background: #516ff5;
+  width: 150px;
+  height: 150px;
+}
+
+.game-container #second-choice {
+  grid-area: b;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.game-container #second-choice::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  border-radius: 50%;
+  background: #eca724;
+  width: 150px;
+  height: 150px;
+}
+
+.game-container #third-choice {
+  grid-area: c;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: relative;
+}
+
+.game-container #third-choice::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  border-radius: 50%;
+  background: #de3650;
+  width: 150px;
+  height: 150px;
+}
+
+.game-container .firstChoiceRes {
+  grid-area: a;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: column;
+  display: none;
+}
+
+.game-container .firstChoiceRes p1 {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.game-container .firstChoiceRes img {
+  width: 60%;
+}
+
+.game-container .secondChoiceRes {
+  grid-area: b;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+  flex-flow: column;
+  align-items: center;
+  display: none;
+}
+
+.game-container .secondChoiceRes p1 {
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.game-container .secondChoiceRes img {
+  width: 60%;
+}
+
+.game-container .results {
+  grid-area: c;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+}
+
+.game-container .results .win-lose {
+  font-size: 45px;
+  margin-bottom: 30px;
+  color: white;
+  font-weight: bold;
+}
+
+.game-container .results .play-again-btn {
+  font-size: 45px;
+  padding: 5px 20px;
+  background: white;
+  border-radius: 20px;
+  color: #1f3656;
+  cursor: pointer;
+}
+
+.rulesBtn {
+  position: absolute;
+  bottom: 20px;
+  border-radius: 20px;
+  padding: 5px 20px;
+  background: white;
+  color: #1f3656;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.rules {
+  position: absolute;
+  color: white;
+  bottom: 50px;
+  justify-content: center;
+  display: none;
+  align-items: center;
+  flex-flow: column;
+  list-style-type: none;
+  z-index: 10;
+  background: #1f3656;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    width: 40%;
+    height: 90%;
+    border-radius: 20px;
+    border: 2px solid white;
+  }
+}

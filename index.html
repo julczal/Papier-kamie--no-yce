@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="style.css" rel="stylesheet">
+  <title>Rock, Paper, Scissors</title>
+
+</head>
+<body>
+  <div class="container">
+  <section class="result-container">
+    <div class="title">
+      <p1>Rock</p1>
+      <p1>Paper</p1>
+      <p1>Scissors</p1>
+    </div>
+    <div class="score-container">
+      <p1>score</p1>
+      <div class="score">0</div>
+    </div>
+  </section>
+
+  <section class="game-container">
+    <div id="first-choice"><img id="p1" class="choice" src="images/icon-paper.svg"></div>
+    <div id="second-choice"><img id="p2" class="choice" src="images/icon-scissors.svg"></div>
+    <div id="third-choice"><img id="p3" class="choice" src="images/icon-rock.svg"></div>
+  </section>
+  <div class="rulesBtn">Rules</div>
+    <ul class="rules">
+      <li>remis=3pkt</li>
+      <li>wygrana=3pkt</li>
+      <li>przegrana=0pkt</li>
+    </ul>
+</div>
+  <script src="main.js"></script>
+</body>
+</html>
